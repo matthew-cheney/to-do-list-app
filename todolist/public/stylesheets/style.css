@@ -1,0 +1,51 @@
+html {
+  background-color: #a3d9ff;
+}
+
+body {
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: rgba(0,0,0,.75);
+}
+
+button {
+  font-size: inherit;
+  color: inherit;
+}
+
+input {
+  font-size: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+#headbar {
+  padding: 0;
+  font-size: 32px;
+  display: inline-block;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+#headbar img {
+  width: 14vw;
+  position: relative;
+  top: 2vw;
+  background-color: red;
+}
+
+#allOfIt {
+  font-size: 200%;
+  position: relative;
+  top: 5vh;
+  display: inline-block;
+  padding: 20px;
+  border-style: groove;
+}
+
+#allOfIt input {
+  font-size: inherit;
+}
