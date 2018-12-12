@@ -11,7 +11,7 @@
 
 <body ng-controller="myController" id="allOfIt">
     <div id="headbar">
-        {{user.username}}'s To Do List
+        {{user.username}}'s to do list
     </div>
     <div id="list">
         <div ng-repeat="x in user.todolist" class="divRepeat">
@@ -20,9 +20,11 @@
                     <td class="boxTD">
                         <input class="checkInput" type="checkbox" ng-model="x.status" ng-change="toggleStatus()">
                     </td>
-                    <td class="contentTD" ng-click="x.status = !x.status; toggleStatus()">
-                        <span ng-show="x.status" style="text-decoration: line-through"><span class="title">{{x.title}}</span><span class="details" ng-hide="!x.details"> - {{x.details}}</span></span>
-                        <span ng-show="!x.status"><span class="title">{{x.title}}</span><span class="details" ng-hide="!x.details"> - {{x.details}}</span></span>
+                    <td class="contentTD">
+                        <span ng-show="x.status"><span class="title"><input disabled value="{{x.title}}" ng-model="x.title" ng-blur="updateColor()" style="border-style: none; background-color: rgba(0,0,0,0); font-size: inherit; width: 100%; text-decoration: line-through"></span><br>
+                        <span class="details" ng-hide="!x.details"><input disabled value="{{x.details}}" ng-model="x.details" ng-blur="updateColor()" style="border-style: none; background-color: rgba(0,0,0,0); font-size: inherit; width: 100%; text-decoration: line-through"></span></span>
+                        <span ng-show="!x.status"><span class="title"><input value="{{x.title}}" ng-model="x.title" ng-blur="updateColor()" style="border-style: none; background-color: rgba(0,0,0,0); font-size: inherit; width: 100%"></span><br>
+                        <span class="details" ng-hide="!x.details"><input value="{{x.details}}" ng-model="x.details" ng-blur="updateColor()" style="border-style: none; background-color: rgba(0,0,0,0); font-size: inherit; width: 100%"></span></span>
                     </td>
                     <td class="trashTD">
                         <img src="https://image.flaticon.com/icons/svg/65/65307.svg" class="trashCan" ng-click="deleteItem($index)">
