@@ -1,4 +1,4 @@
-# To Do List
+# To Do List App
 A simple to-do list web app.
 
 This app requires npm and mongoDB.
